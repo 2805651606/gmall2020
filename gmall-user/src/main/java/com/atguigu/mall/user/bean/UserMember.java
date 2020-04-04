@@ -1,26 +1,31 @@
 package com.atguigu.mall.user.bean;
 
-
-
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
+@Table(name = "ums_member")
 public class UserMember {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
-    private String memberLevleId;
+    private String memberLevelId;
     private String username;
     private String password;
     private String nickname;
     private String phone;
-    private int  status;
-    private Date create_time;
+    private int status;
+    private Date createTime;
     private String icon;
     private int gender;
     private Date birthday;
     private String city;
     private String job;
     private String personalizedSignature;
-    private int source_type;
+    private int sourceType;
     private int integration;
     private int growth;
     private int luckeyCount;
@@ -34,12 +39,12 @@ public class UserMember {
         this.id = id;
     }
 
-    public String getMemberLevleId() {
-        return memberLevleId;
+    public String getMemberLevelId() {
+        return memberLevelId;
     }
 
-    public void setMemberLevleId(String memberLevleId) {
-        this.memberLevleId = memberLevleId;
+    public void setMemberLevelId(String memberLevelId) {
+        this.memberLevelId = memberLevelId;
     }
 
     public String getUsername() {
@@ -82,12 +87,12 @@ public class UserMember {
         this.status = status;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     public String getIcon() {
@@ -138,12 +143,12 @@ public class UserMember {
         this.personalizedSignature = personalizedSignature;
     }
 
-    public int getSource_type() {
-        return source_type;
+    public int getSourceType() {
+        return sourceType;
     }
 
-    public void setSource_type(int source_type) {
-        this.source_type = source_type;
+    public void setSourceType(int sourceType) {
+        this.sourceType = sourceType;
     }
 
     public int getIntegration() {
@@ -177,4 +182,9 @@ public class UserMember {
     public void setHistoryIntegration(int historyIntegration) {
         this.historyIntegration = historyIntegration;
     }
+
+
+
+
+
 }

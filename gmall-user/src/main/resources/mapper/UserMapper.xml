@@ -6,4 +6,5 @@
     <select id="selectAllUser" resultType="com.atguigu.mall.user.bean.UserMember">
         select t.* from ums_member t
     </select>
+
 </mapper>
