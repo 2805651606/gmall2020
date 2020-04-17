@@ -5,7 +5,7 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.atguigu.gmall.bean.UserMember;
 import com.atguigu.gmall.bean.UserMemberReceiveAddress;
 import com.atguigu.gmall.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,6 +17,7 @@ public class UserController {
 
     @Reference  //远程的时候使用
     UserService userService;
+
     @RequestMapping("/getReceiveAddressByMemberId")
     @ResponseBody
     public List<UserMemberReceiveAddress> getReceiveAddressByMemberId(String memberId){
